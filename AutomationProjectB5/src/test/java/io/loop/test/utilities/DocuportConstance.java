@@ -24,6 +24,6 @@ public class DocuportConstance {
     //emal for reset password
     public static final String EMAIL_FOR_RESET_PASSWORD = "forgotpasswordg1@gmail.com";
 
-    //text for expected message
-    public static final String EXPECTED_MESSAGE_AFTER_LOG_IN = "We've sent you an email with a link to reset your password. Please check your email";
-}
+    //password
+    public static final String PASSWORD = "Group1";
+  }
