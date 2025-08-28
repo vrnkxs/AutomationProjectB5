@@ -26,4 +26,10 @@ public class DocuportConstance {
 
     //password
     public static final String PASSWORD = "Group1";
+
+    //roles
+    public static String ADVISOR = "advisor";
+    public static String CLIENT = "client";
+    public static String SUPERVISOR = "supervisor";
+    public static String EMPLOYEE = "employee";
   }
