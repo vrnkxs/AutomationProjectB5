@@ -23,13 +23,14 @@ public class T4_google_search {
      */
 
     @Test
-    public void google_search() {
+    public void google_search() throws InterruptedException {
         Driver.getDriver().get(ConfigurationReader.getProperties("google.url"));
         System.out.println("((RemoteWebDriver) driver).getSessionId() = " + ((RemoteWebDriver) Driver.getDriver()).getSessionId());
         WebElement searchBox = Driver.getDriver().findElement(By.name("q"));
         searchBox.sendKeys("Loop Academy" + Keys.ENTER);
+        Thread.sleep(3000);
         String actualTitle = Driver.getDriver().getTitle();
-        assertEquals(actualTitle, "Loop academy - Google Search");
+        assertEquals(actualTitle, "Loop Academy - Google Search");
     }
 
     @Test
@@ -37,7 +38,7 @@ public class T4_google_search {
         Driver.getDriver().get(ConfigurationReader.getProperties("docuportBETA"));
         System.out.println("((RemoteWebDriver) Driver.getDriver()).getSessionId() = " + ((RemoteWebDriver) Driver.getDriver()).getSessionId());
 
-        DocuportUtils.login(Driver.getDriver(), DocuportConstance.USERNAME_ADVISOR);
+        DocuportUtils.login(Driver.getDriver(), DocuportConstance.ADVISOR);
         WebElement myUploads = Driver.getDriver().findElement(By.xpath("//span[contains(text(),'My uploads')]"));
         myUploads.click();
     }
