@@ -5,7 +5,6 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-
 import static org.testng.Assert.assertEquals;
 
 public class T1_alerts extends TestBase {
@@ -31,7 +30,6 @@ public class T1_alerts extends TestBase {
     3. Click Ok
     4. Validate "You entered: Loop Academy" text is displayed
      */
-
     @Test
     public void informationAlert() {
         driver.get("https://loopcamp.vercel.app/javascript-alerts.html");
@@ -66,8 +64,6 @@ public class T1_alerts extends TestBase {
         expected = "You clicked: Cancel";
         actual = successMessageForConfirmation.getText();
         assertEquals(actual, expected, "Actual does not match expected");
-
-
     }
 
     @Test
